@@ -1,0 +1,23 @@
+<p-table [value]="contacts" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+        </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-contact>
+        <tr>
+            <td>{{contact.name}}</td>
+            <td>{{contact.phoneNumber}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.randomAddress}}</td>
+            <td>{{contact.longitude}}</td>
+            <td>{{contact.latitude}}</td>
+        </tr>
+    </ng-template>
+</p-table>

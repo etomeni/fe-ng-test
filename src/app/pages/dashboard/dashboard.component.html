@@ -1,0 +1,7 @@
+<p-card header="Dashboard" styleClass="m-4">
+    <p-button (onClick)="toggleView()" [label]="'Switch to ' + (viewMode === 'table' ? 'Map' : 'Table') + ' View'" styleClass="mb-3"></p-button>
+    <ng-container [ngSwitch]="viewMode">
+      <app-table-view *ngSwitchCase="'table'" [contacts]="contacts"></app-table-view>
+      <app-map-view *ngSwitchCase="'map'" [contacts]="contacts"></app-map-view>
+    </ng-container>
+</p-card>
